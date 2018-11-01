@@ -5,7 +5,15 @@ public class NoNullArrayList<T> extends ArrayList<T> {
 
 	}
 
-	public NoNullArrayList(T value) {
+	public NoNullArrayList(int startingCapacity) {
+		super(startingCapacity);
+	}
+
+	public void set() {
+
+	}
+
+	public void add() {
 
 	}
 
