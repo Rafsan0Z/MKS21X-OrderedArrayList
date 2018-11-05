@@ -26,20 +26,30 @@ public class Driver_3 {
     System.out.println();
 
     System.out.println("size: " + NAL.size());                              // 5
-    System.out.println("NAL: " + NAL);
+    System.out.println("NAL: " + NAL + "\n");
     // [i'm, invincible!, you're, a, looney]
 
     // NOTE: comment these null tests out accordingly, as thrown errors stop the program
 
-    NAL.add(null); System.out.println("NAL.add(null)");
+try{
+     NAL.add(null); System.out.println("NAL.add(null)");
+   } catch (IllegalArgumentException e) {
+     System.out.println("Exception reached!");
+   }
     // [i'm, invincible!, you're, a, looney, null]
     // IllegalArgumentException: null, invalid input
-
+try{
     NAL.add(null); System.out.println("NAL.add(2,null)");
+  } catch(IllegalArgumentException e) {
+    System.out.println("Exception reached again!");
+  }
     // [i'm, invincible!, null, you're, a, looney]
     // IllegalArgumentException: null, invalid input
-
+try{
     NAL.set(0,null); System.out.println("NAL.set(0,null)");
+  } catch (IllegalArgumentException e) {
+    System.out.println("Exception reached yet again!");
+  }
     // [null, invincible!, you're, a, looney]
     // IllegalArgumentException: null, invalid input
 
