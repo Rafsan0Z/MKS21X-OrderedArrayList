@@ -9,18 +9,22 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
 		super(startingCapacity);
 	}
 
-//	public int findIndex(T 
+//	public int findIndex(T
 
 	public boolean add(T element) {
-
+		int max = 0;
+		for(int i = 0; i < size(); i++) {
+			if(element.compareTo(get(i)) >= 0) {max = i+1;}
+		}
+		super.add(max,element);
+		return true;
 	}
 
 	public void add(int index, T element) {
-	
-	}
-
-	public T set(int index, T element) {
 
 	}
 
-} 
+//	public T set(int index, T element) {
+	//}
+
+}
